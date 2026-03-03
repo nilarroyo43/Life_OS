@@ -2,7 +2,7 @@ package com.lifeos.payload.request;
 
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 import com.lifeos.model.CardStatus;
 
@@ -16,9 +16,9 @@ public class CardRequest {
     
     private CardStatus status; // PENDING, IN_PROGRESS, DONE, ARCHIVED
     
-    private LocalDateTime startDate;
+    private LocalDate startDate;
     
-    private LocalDateTime endDate;
+    private LocalDate endDate;
     
     private Long categoryId; // EL DATO CLAVE
 }

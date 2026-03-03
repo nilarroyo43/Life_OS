@@ -4,9 +4,10 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "cards")
@@ -29,8 +30,8 @@ public class Card {
     private CardStatus status; 
 
     // --- TEMPORALIDAD AUTOMÁTICA ---
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
 
     // --- RELACIONES ESTRUCTURALES ---
     @ManyToOne
